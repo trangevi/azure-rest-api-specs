@@ -121,6 +121,7 @@ model ChatCompletionsOptions {
   `model`?: string;
 
   ...Record<unknown>;
+  ...AdditionalRequestHeaders;
 }
 
 alias ChatCompletionsCommon = {
