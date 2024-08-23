@@ -121,9 +121,10 @@ interface Client3 {
   getModelInfo is AI.Model.getModelInfo;
 }
 
-@override(AI.Model.getChatCompletions)
 op getChatCompletions(
-    chatCompletionsOptions: AI.Model.ChatCompletionsOptions,
-    apiVersion: Azure.Core.Foundations.ApiVersionParameter,
-    ...AI.Model.AdditionalRequestHeaders
+  chatCompletionsOptions: AI.Model.ChatCompletionsOptions,
+  apiVersion: Azure.Core.Foundations.ApiVersionParameter,
+  ...AI.Model.AdditionalRequestHeaders
 ): AI.Model.ChatCompletions;
+
+@@override(AI.Model.getChatCompletions, getChatCompletions, "csharp");
